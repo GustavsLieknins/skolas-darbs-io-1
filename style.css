@@ -1,5 +1,116 @@
-.contaier {
+
+.container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: ;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    background-color: grey;
+    width: 206px;
+    height: auto;
+    margin: 30px auto;
+    row-gap: 2px;
+    column-gap: 2px;
+    border-radius: 10px;
 }
+
+button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+
+    align-items: center;
+    margin: auto;
+}
+
+
+
+.item-1 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(96, 96, 128);
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+.item-2 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.item-3 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.item-4 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.item-5 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.item-6 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.item-7 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.item-8 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.item-9 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+.item-10 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.item-11 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.item-12 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+.item-13 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.item-14 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+.item-15 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+.item-16 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+.item-17 {
+    background-color: rgb(59, 59, 168);
+    grid-column: 4/5;
+    grid-row: 5/6;
+}
+
+
