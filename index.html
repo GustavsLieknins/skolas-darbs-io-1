@@ -10,108 +10,177 @@
 <body>
     <div class="container">
         <div class="item-1" id="result"></div>
-        <div class="item-2" value="7" onclick="myFunction7()" ><button id="button7">7</button></div>
-        <div class="item-3" value="8" onclick="myFunction8()" ><button id="button8">8</button></div>
-        <div class="item-4" value="9" onclick="myFunction9()" ><button id="button9">9</button></div>
-        <div class="item-5" value="*" onclick="myFunctionX()" ><button id="buttonX">X</button></div>
-        <div class="item-6" value="4" onclick="myFunction4()" ><button id="button4">4</button></div>
-        <div class="item-7" value="5" onclick="myFunction5()" ><button id="button5">5</button></div>
-        <div class="item-8" value="6" onclick="myFunction6()"><button id="button6">6</button></div>
+        <div class="item-2" value="7" ><button id="button7">7</button></div>
+        <div class="item-3" value="8"  ><button id="button8">8</button></div>
+        <div class="item-4" value="9"  ><button id="button9">9</button></div>
+        <div class="item-5" value="*" onclick="myFunctionX()" ><button id="buttonX">x</button></div>
+        <div class="item-6" value="4" ><button id="button4">4</button></div>
+        <div class="item-7" value="5" ><button id="button5">5</button></div>
+        <div class="item-8" value="6" ><button id="button6">6</button></div>
         <div class="item-9" value="-" onclick="myFunctionMinus()"><button id="buttonMinuss">-</button></div>
-        <div class="item-10" value="1" onclick="myFunction1()"><button id="button7">1</button></div>
-        <div class="item-11" value="2" onclick="myFunction2()"><button id="button2">2</button></div>
-        <div class="item-12" value="3" onclick="myFunction3()"><button id="button3">3</button></div>
+        <div class="item-10" value="1" ><button id="button1">1</button></div>
+        <div class="item-11" value="2" ><button id="button2">2</button></div>
+        <div class="item-12" value="3" ><button id="button3">3</button></div>
         <div class="item-13" value="+" onclick="myFunctionPlus()"><button id="buttonPlus">+</button></div>
-        <div class="item-14" value="-" onclick="myFunctionChangePlusMinus()"><button class="bottom-left" id="buttonPlusMinuss">+/-</button></div>
-        <div class="item-15" value="0" onclick="myFunction0()"><button id="button0">0</button></div>
-        <div class="item-16" value="." onclick="myFunctionDot()"><button id="buttonDot">.</button></div>
+        <div class="item-14" value="/" onclick="myFunctionAC()"><button class="bottom-left" id="buttonPlusMinuss">AC</button></div>
+        <div class="item-15" value="0" ><button id="button0">0</button></div>
+        <div class="item-16" value="." onclick="myFunctionDevide()"><button id="buttonDot">/</button></div>
         <div class="item-17" value="=" onclick="myFunctionDone()"><button class="bottom-right" id="buttonDone">=</button></div>
+
     </div>
     <script>
-    const button7 = document.getElementById("button7");
-    const button8 = document.getElementById("button8");
-    const button9 = document.getElementById("button9");
-    const buttonX = document.getElementById("buttonX");
-    const button4 = document.getElementById("button4");
-    const button5 = document.getElementById("button5");
-    const button6 = document.getElementById("button6");
-    const buttonMinuss = document.getElementById("buttonMinuss");
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-    const button3 = document.getElementById("button3");
-    const buttonPlus = document.getElementById("buttonPlus");
-    const buttonPlusMinuss = document.getElementById("buttonPlusMinuss");
-    const button0 = document.getElementById("button0");
-    const buttonDot = document.getElementById("buttonDot");
-    const buttonDone = document.getElementById("buttonDone");
-    let myArray = [];
-      function myFunction7() {
-    myArray.push(parseInt(button7.parentNode.getAttribute("value")));
-    console.log(myArray);
+    // const button7 = document.getElementById("button7");
+    // const button8 = document.getElementById("button8");
+    // const button9 = document.getElementById("button9");
+    // const buttonX = document.getElementById("buttonX");
+    // const button4 = document.getElementById("button4");
+    // const button5 = document.getElementById("button5");
+    // const button6 = document.getElementById("button6");
+    // const buttonMinuss = document.getElementById("buttonMinuss");
+    // const button1 = document.getElementById("button1");
+    // const button2 = document.getElementById("button2");
+    // const button3 = document.getElementById("button3");
+    // const buttonPlus = document.getElementById("buttonPlus");
+    // const buttonPlusMinuss = document.getElementById("buttonPlusMinuss");
+    // const button0 = document.getElementById("button0");
+    // const buttonDot = document.getElementById("buttonDot");
+    // const buttonDone = document.getElementById("buttonDone");
+    // let myArray = [];
+    const resultInHtml = document.getElementById("result");
+
+
+    let zime = "";
+    let firstnumba = "";
+    let result;
+      function myFunctionMinus() {
+        zime = "-"
+        firstnumba = wholenumba;
+        wholenumba = "";
+        resultInHtml.textContent = "";
       }
-      function myFunction8() {
-    myArray.push(parseInt(button8.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction9() {
-    myArray.push(parseInt(button9.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunctionX() {
-        if (!isNaN("value")) {
-       myArray.push(parseInt(value));
-        console.log(myArray);
+      
+      function myFunctionPlus() {
+        zime = "+"
+        firstnumba = wholenumba;
+        wholenumba = "";
+        resultInHtml.textContent = "";
       }
 
+      function myFunctionDevide() {
+        zime = "/"
+        firstnumba = wholenumba;
+        wholenumba = "";
+        resultInHtml.textContent = "";
       }
-      function myFunction4() {
-    myArray.push(parseInt(button4.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction5() {
-    myArray.push(parseInt(button5.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction6() {
-    myArray.push(parseInt(button6.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunctionMinuss() {
-    myArray.push(parseInt(buttonMinuss.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction1() {
-    myArray.push(parseInt(button1.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction2() {
-    myArray.push(parseInt(button2.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction3() {
-    myArray.push(parseInt(button3.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunctionPlus() {
-    myArray.push(parseInt(buttonPlus.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunctionChangePlusMinus() {
-    myArray.push(parseInt(buttonPlusMinuss.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunction0() {
-    myArray.push(parseInt(button0.parentNode.getAttribute("value")));
-    console.log(myArray);
-      }
-      function myFunctionDot() {
-    myArray.push(parseInt(buttonDot.parentNode.getAttribute("value")));
-    console.log(myArray);
+
+      function myFunctionX() {
+        zime = "*"
+        firstnumba = wholenumba;
+        wholenumba = "";
+        resultInHtml.textContent = "";
       }
       function myFunctionDone() {
-    myArray.push(parseInt(buttonDone.parentNode.getAttribute("value")));
-    console.log(myArray);
+        if(zime == "-"){
+          result = firstnumba - wholenumba;
+          resultInHtml.textContent = result;
+        }else if(zime == "+"){
+          result = parseInt(firstnumba) + parseInt(wholenumba);
+          resultInHtml.textContent = result;
+        }else if(zime == "/"){
+          result = firstnumba / wholenumba;
+          resultInHtml.textContent = result;
+        }else if(zime == "*"){
+          result = firstnumba * wholenumba;
+          resultInHtml.textContent = result;
+        }
       }
+
+    const numbas = [];
+    let wholenumba ="";
+
+    for(let i = 0; i<10; i++) {
+      const htmlnumba = document.getElementById("button" + i);
+      numbas.push(htmlnumba);
+      htmlnumba.addEventListener("click",()=>{
+        wholenumba = wholenumba + i;
+        console.log(wholenumba);
+        resultInHtml.textContent = wholenumba ;
+      })
+    }
+    
+    function myFunctionAC() {
+      result = "";
+      firstnumba = "";
+      wholenumba = "";
+      resultInHtml.textContent = "";
+    }
+    
+
+  //     function myFunction8() {
+  //   myArray.push(parseInt(button8.parentNode.getAttribute("value")));
+  //   console.log(myArray);
+  //     }
+  //     function myFunction9() {
+  //   myArray.push(parseInt(button9.parentNode.getAttribute("value")));
+  //   console.log(myArray);
+  //     }
+  //     function myFunctionX() {
+  //       if (!isNaN("value")) {
+  //      myArray.push(parseInt(value));
+  //       console.log(myArray);
+  //     }
+
+  //     }
+  //     function myFunction4() {
+  //   myArray.push(parseInt(button4.parentNode.getAttribute("value")));
+  //   console.log(myArray);
+  // }
+    //   function myFunction5() {
+    // myArray.push(parseInt(button5.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunction6() {
+    // myArray.push(parseInt(button6.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunctionMinuss() {
+    // myArray.push(parseInt(buttonMinuss.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunction1() {
+    // myArray.push(parseInt(button1.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunction2() {
+    // myArray.push(parseInt(button2.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunction3() {
+    // myArray.push(parseInt(button3.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunctionPlus() {
+    // myArray.push(parseInt(buttonPlus.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunctionChangePlusMinus() {
+    // myArray.push(parseInt(buttonPlusMinuss.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunction0() {
+    // myArray.push(parseInt(button0.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunctionDot() {
+    // myArray.push(parseInt(buttonDot.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+    //   function myFunctionDone() {
+    // myArray.push(parseInt(buttonDone.parentNode.getAttribute("value")));
+    // console.log(myArray);
+    //   }
+
+
     </script>
 </body>
 </html>
