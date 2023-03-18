@@ -1,6 +1,9 @@
 body {
     background-image: url("blue.png");
+    background-size: cover;
 }
+
+
 
 .container {
     display: grid;
@@ -13,6 +16,10 @@ body {
     row-gap: 2px;
     column-gap: 2px;
     border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    align-items: end;
+
 }
 
 button {
@@ -24,6 +31,9 @@ button {
     margin: auto;
     color:rgb(255, 255, 255);
     background-color: rgb(95, 82, 98);
+    font-weight: bold;
+    color: rgb(238, 250, 255);
+    
 }
 
 

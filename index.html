@@ -22,12 +22,12 @@
         <div class="item-11" value="2" ><button id="button2">2</button></div>
         <div class="item-12" value="3" ><button id="button3">3</button></div>
         <div class="item-13" value="+" onclick="myFunctionPlus()"><button id="buttonPlus">+</button></div>
-        <div class="item-14" value="/" onclick="myFunctionAC()"><button class="bottom-left" id="buttonPlusMinuss">AC</button></div>
+        <div class="item-14" value="/" onclick="myFunctionAC()"><button class="bottom" id="buttonPlusMinuss">AC</button></div>
         <div class="item-15" value="0" ><button id="button0">0</button></div>
         <div class="item-16" value="." onclick="myFunctionDevide()"><button id="buttonDot">/</button></div>
         <div class="item-17" value="=" onclick="myFunctionDone()"><button class="bottom-right" id="buttonDone">=</button></div>
-
     </div>
+
     <script>
     // const button7 = document.getElementById("button7");
     // const button8 = document.getElementById("button8");
@@ -79,6 +79,13 @@
         wholenumba = "";
         resultInHtml.textContent = "";
       }
+      function  myFunctionPlusMinus() {
+        zime = "-/+"
+        firstnumba = wholenumba;
+        wholenumba = "";
+        resultInHtml.textContent = "";
+      }
+
       function myFunctionDone() {
         if(zime == "-"){
           result = firstnumba - wholenumba;
@@ -91,6 +98,11 @@
           resultInHtml.textContent = result;
         }else if(zime == "*"){
           result = firstnumba * wholenumba;
+          resultInHtml.textContent = result;
+        } else if(zime == "-/+"){
+          let dubble;
+          dubble = firstnumba * 2;
+          result = firstnumba - dubble;
           resultInHtml.textContent = result;
         }
       }
