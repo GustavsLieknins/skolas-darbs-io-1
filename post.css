@@ -1,0 +1,61 @@
+header {
+    
+    background-color: blue;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+a {
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: gold;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+li {
+    list-style: none; 
+    transition: transform 0.3s;
+
+}
+li:hover {
+    list-style: none;
+    transform: translateX(10px);
+}
+
+
+main {
+    margin-top: 70px;
+    color: orange;
+
+}
+
+body{
+    background-color: black;
+}
+
+.cube {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    position: relative;
+}
+
+.inner-cube {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

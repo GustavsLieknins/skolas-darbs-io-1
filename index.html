@@ -1,172 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darbins for Jekabins</title>
-    <link rel="Stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GL Portfolio</title>
+  <link rel="Stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="item-1" id="result"></div>
-        <div class="item-2" value="7" ><button id="button7">7</button></div>
-        <div class="item-3" value="8"  ><button id="button8">8</button></div>
-        <div class="item-4" value="9"  ><button id="button9">9</button></div>
-        <div class="item-5" value="*" onclick="myFunctionX()" ><button id="buttonX">x</button></div>
-        <div class="item-6" value="4" ><button id="button4">4</button></div>
-        <div class="item-7" value="5" ><button id="button5">5</button></div>
-        <div class="item-8" value="6" ><button id="button6">6</button></div>
-        <div class="item-9" value="-" onclick="myFunctionMinus()"><button id="buttonMinuss">-</button></div>
-        <div class="item-10" value="1" ><button id="button1">1</button></div>
-        <div class="item-11" value="2" ><button id="button2">2</button></div>
-        <div class="item-12" value="3" ><button id="button3">3</button></div>
-        <div class="item-13" value="+" onclick="myFunctionPlus()"><button id="buttonPlus">+</button></div>
-        <div class="item-14" value="/" onclick="myFunctionAC()"><button class="ac" id="buttonPlusMinuss">AC</button></div>
-        <div class="item-15" value="0" ><button id="button0">0</button></div>
-        <div class="item-16" value="." onclick="myFunctionDevide()"><button id="buttonDot">/</button></div>
-        <div class="item-17" value="=" onclick="myFunctionDone()"><button class="" id="buttonDone">=</button></div>
-        <div class="item-18" value="-/+" onclick="myFunctionPlusMinus()"><button class="firstNum" id="buttonPlusMinus">+/-</button></div>
-        <div class="item-19" value="-/++" onclick="myFunctionPlusMinusSecond()"><button class="secondNum" id="buttonPlusMinusSecond">+/- sec num</button></div>
-    </div>
-
-    <script>
-
-    const resultInHtml = document.getElementById("result");
-
-
-    let zime = "";
-    let firstnumba = 0;
-    let result;
-    let resultNegativeNumbas = "";
-    let NegativeFirstNumber = "";
-    let NegativeSecondNumber = "";
-    let YesNoMinus;
-
-    const numbas = [];
-    let wholenumba = "";
-
-      function myFunctionMinus() {
-        if(YesNoMinus == 1){
-          firstnumba = wholenumba - wholenumba*2;
-        }else{
-          firstnumba = wholenumba;
-        }
-        zime = "-"
-        wholenumba = "";
-        resultInHtml.textContent = firstnumba;
-
-    }
-      function myFunctionPlus() {
-        if(YesNoMinus == 1){
-          firstnumba = wholenumba - wholenumba*2;
-        }else{
-          firstnumba = wholenumba;
-        }
-        zime = "+"
-        wholenumba = "";
-        resultInHtml.textContent = firstnumba;
-        // console.log(wholenumba)
-        // console.log(firstnumba)
-      }
-
-      function myFunctionDevide() {
-        if(YesNoMinus == 1){
-          firstnumba = wholenumba - wholenumba*2;
-        }else{
-          firstnumba = wholenumba;
-        }
-        zime = "/"
-        wholenumba = "";
-        resultInHtml.textContent = firstnumba;
-
-      }
-
-      function myFunctionX() {
-        if(YesNoMinus == 1){
-          firstnumba = wholenumba - wholenumba*2;
-        }else{
-          firstnumba = wholenumba;
-        }
-        zime = "*"
-        wholenumba = "";
-        resultInHtml.textContent = firstnumba;
-      }
-
-      function  myFunctionPlusMinus() {
-
-        YesNoMinus = 1;
-        firstnumba = wholenumba - wholenumba*2;
-        resultInHtml.textContent = firstnumba;
-      }
-      function myFunctionPlusMinusSecond(){
-        YesNoMinus = 1;
-        wholenumba = wholenumba - wholenumba*2;
-        resultInHtml.textContent = wholenumba;
-      }
-        // if(firstnumba>wholenumba){
-        //   wholenumba = wholenumba - wholenumba*2;
-        // }
-        // } else if(wholenumba == wholenumba>0){
-        // YesNoMinus = 0;
-        // firstnumba = wholenumba;
-        // }
-
-
-      function myFunctionDone() {
-        console.log(firstnumba)
-        console.log(wholenumba)
-
-        if(zime == "-" ){
-          result = firstnumba - wholenumba;
-          resultInHtml.textContent = result;
-        }else if(zime == "+"){
-          result = parseInt(firstnumba) + parseInt(wholenumba);
-          resultInHtml.textContent = result;
-        }else if(zime == "/"){
-          result = firstnumba / wholenumba;
-          resultInHtml.textContent = result;
-        }else if(zime == "*"){
-          result = firstnumba * wholenumba;
-          resultInHtml.textContent = result;
-        }
-
-        console.log(firstnumba)
-        console.log(wholenumba)
-        // if(NegativeFirstNumber == NegativeFirstNumber>0 || NegativeFirstNumber<0){
-        //   resultNegativeNumbas = NegativeFirstNumber - NegativeSecondNumber;
-        //   resultInHtml.textContent = result;
-        // }else if(zime == "+"){
-        //   resultNegativeNumbas = parseInt(NegativeFirstNumber) + parseInt(NegativeSecondNumber);
-        //   resultInHtml.textContent = result;
-        // }else if(zime == "/"){
-        //   resultNegativeNumbas = NegativeFirstNumber / NegativeSecondNumber;
-        //   resultInHtml.textContent = result;
-        // }else if(zime == "*"){
-        //   resultNegativeNumbas = NegativeFirstNumber * NegativeSecondNumber;
-        //   resultInHtml.textContent = result;
-        // } 
-      }
-
-    
-    for(let i = 0; i<10; i++) {
-      const htmlnumba = document.getElementById("button" + i);
-      numbas.push(htmlnumba);
-      htmlnumba.addEventListener("click",()=>{
-        wholenumba = wholenumba + i;
-        console.log(wholenumba);
-        resultInHtml.textContent = wholenumba ;
-      })
-    }
-    
-    function myFunctionAC() {
-      result = "";
-      firstnumba = "";
-      wholenumba = "";
-      resultInHtml.textContent = "";
-      YesNoMinus = "";
-    }
-    
-    </script>
+  <div class="container">
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+    <div class="item-4"></div>
+  </div>
 </body>
 </html>
