@@ -1,15 +1,22 @@
+:root {
+    --anidur:0.5s;
+}
+
 header {
-    
-    background-color: rgb(58, 58, 58);
     position: fixed;
     width: 100vw;
     top: 0;
     left: 0;
-    right: 0;
     z-index: 10;
     /* position: relative; */
     height: 60px;
     
+}
+nav {
+    background-color: rgb(58, 58, 58);
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 a {
     color: orange;
@@ -68,13 +75,21 @@ body{
 
 .burger {
     display: none;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
 
 }
+
 .check {
     display: none;
+
 }
 
-@media (max-width: 270px) {
+@media (max-width: 420px) {
     .burger {
         display: block;
     }
@@ -87,19 +102,58 @@ body{
         flex-direction: column;
         margin: 0;    
         width: 100vw;
+        padding-top: 20px;
         padding-left: 0;
         align-items: center;
         display: flex;
         transform: translateY(-200px);
-        transition: transform 1s;
-        z-index: -100;
+        transition: transform 0.7s cubic-bezier(.65,.05,.36,1);
+        z-index: -1;
+        animation: changez 1s;
+
     }
 
-    nav {
-        z-index: 8;
+    @keyframes changez {
+        0% {z-index: -1;}
+        99% {z-index: -1;}
+        100% {z-index: 5;}
+        
     }
+
+    @keyframes changezback {
+        0% {z-index: 5;}
+        1% {z-index: -1;}
+        100% {z-index: -1;}
+        
+    }
+
+    .close {
+
+        transition: transform var(--anidur);
+        transform: rotate(0deg) scale(0);
+
+    }
+
+    .check:checked ~ .burger .close {
+
+        transform: rotate(180deg) scale(1);
+    }
+
+    
+    .menu {
+        display: block;
+        transition: transform var(--anidur);
+    }
+
+    .check:checked ~ .burger .menu {
+        /* display: none; */
+        transform: rotate(180deg) scale(0);
+    }
+
+
 
     li {
+
         margin: 0;
         padding-bottom: 20px;
     }
@@ -108,16 +162,28 @@ body{
         position: absolute;
         top: 0;
         left: 0;
-        width: 40px;
+        width: 100vw;
         height: 40px;
         opacity: 0;
         cursor: pointer;
-
+        z-index: 3;
+        
 
     }
 
-    .check:checked + ul {
+    .check:checked + ul{
         transform: translateY(0px);
+        z-index: 50;
+        /* display: block; */
+        animation: changezback 1s;
+        
     }
+
+    .check:checked {
+        width: 100vw;
+        height: 100vh;
+    }
+
+
 
 }
