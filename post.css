@@ -1,20 +1,24 @@
 header {
     
-    background-color: blue;
+    background-color: rgb(58, 58, 58);
     position: fixed;
     width: 100vw;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 10;
     /* position: relative; */
     height: 60px;
+    
 }
 a {
     color: orange;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 25px;
+    font-family: Sans-serif, Arial;
+    font-weight: bold;
 }
 
 a:hover {
@@ -39,11 +43,11 @@ li:hover {
 main {
     margin-top: 70px;
     color: orange;
-
+    font-family: Sans-serif, Arial;
 }
 
 body{
-    background-color: black;
+    background-color: rgb(241, 241, 241);
 }
 
 .cube {
@@ -70,7 +74,7 @@ body{
     display: none;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 270px) {
     .burger {
         display: block;
     }
@@ -79,13 +83,20 @@ body{
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: blue;
+        background-color: rgb(36, 36, 36);
         flex-direction: column;
         margin: 0;    
         width: 100vw;
         padding-left: 0;
         align-items: center;
-        display: none;
+        display: flex;
+        transform: translateY(-200px);
+        transition: transform 1s;
+        z-index: -100;
+    }
+
+    nav {
+        z-index: 8;
     }
 
     li {
@@ -99,12 +110,14 @@ body{
         left: 0;
         width: 40px;
         height: 40px;
-        opacity: 0.5;
+        opacity: 0;
         cursor: pointer;
+
 
     }
 
     .check:checked + ul {
-        display: flex;
+        transform: translateY(0px);
     }
+
 }
