@@ -1,5 +1,6 @@
 :root {
     --anidur:0.5s;
+    --footerhgt: 60px;
 }
 
 header {
@@ -12,6 +13,18 @@ header {
     height: 60px;
     
 }
+
+footer {
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--footerhgt);
+    text-align: center;
+    background-color: rgba(58, 58, 58, 0.177);
+
+}
+
 nav {
     top: 0;
     background-color: rgb(58, 58, 58);
@@ -21,7 +34,6 @@ nav {
 }
 a {
     color: orange;
-    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s;
     font-size: 25px;
@@ -39,6 +51,7 @@ ul {
     margin: 0; 
     align-items: center;
     height: 100%;
+    padding-left: 0;
 }
 li {
     list-style: none; 
@@ -51,14 +64,38 @@ li:hover {
 }
 
 
-main {
-    margin-top: 70px;
-    color: orange;
-    font-family: Sans-serif, Arial;
+
+main h1 {
+    font-size: 45px;
 }
 
+main p {
+    font-size: 30px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    /* align-content: center;
+    justify-content: center;
+    flex-direction: column; */
+    padding-top: 70px;
+    color: orange;
+    font-family: Sans-serif, Arial;
+    align-items: center;
+    text-align: center ;
+    padding-bottom: 60px;
+    min-height: calc(100vh - var(--footerhgt));
+}
+main button {
+    display: flex;
+    font-size: 20px;
+    padding: 10px 50px;
+}
 body{
-    background-color: rgb(241, 241, 241);
+    background: linear-gradient(to right, rgb(239, 239, 239), rgb(200, 200, 200) 70%);
+    margin: 0;
 }
 
 .cube {
@@ -93,7 +130,12 @@ img {
 
 }
 
-
+p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Sans-serif, Arial;
+    font-weight: bold;
+}
 
 @media (max-width: 420px) {
     .burger {
